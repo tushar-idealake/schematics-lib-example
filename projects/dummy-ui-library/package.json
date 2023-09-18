@@ -1,10 +1,21 @@
 {
   "name": "dummy-ui-library",
-  "version": "0.0.1",
+  "version": "0.0.6",
+  "scripts": {
+    "build" : "ng build &&tsc -p tsconfig.schematics.json",
+    "postbuild" : "copyfiles schematics/*/files/** schematics/collection.json ../../dist/dummy-ui-library/"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0"
   },
+  "ng-add": {
+    "save": "true"
+  },
+  "schematics": "./schematics/collection.json",
   "dependencies": {
     "tslib": "^2.3.0"
   },
