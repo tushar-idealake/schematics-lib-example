@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+import { DummyUiLibraryService } from 'dummy-ui-library'
+
+@Component({
+  selector: '<%= dasherize(name) %>',
+  template: `<p><%= dasherize(name) %> works!</p>`
+})
+export class <%= classify(name) %>Component implements OnInit {
+
+  constructor(private dummyUIService: DummyUiLibraryService) { }
+
+  ngOnInit(): void {
+  }
+
+}

@@ -1,0 +1,19 @@
+{
+    "$id": "dummy-ui-component",
+    "title": "Dummy UI Library Component Schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The name of the component",
+            "type": "string"
+        },
+        "path": {
+            "description": "Where the files for the components will be created",
+            "type": "string",
+            "format": "path",
+            "x-prompt": "Provide path for this component...",
+            "default": "src/app"
+        }
+    }
+}
+

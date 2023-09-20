@@ -1,9 +1,9 @@
 {
   "name": "dummy-ui-library",
-  "version": "0.0.6",
+  "version": "0.0.13",
   "scripts": {
     "build" : "ng build &&tsc -p tsconfig.schematics.json",
-    "postbuild" : "copyfiles schematics/*/files/** schematics/collection.json ../../dist/dummy-ui-library/"
+    "postbuild" : "copyfiles schematics/*/files/** schematics/*/schema.json schematics/collection.json ../../dist/dummy-ui-library/"
   },
   "publishConfig": {
     "registry": "http://localhost:4873/"
